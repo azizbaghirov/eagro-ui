@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --green-primary: #0f766e;
+    --green-250: #95b6b3;
+    --green-400: #648c88;
+    --grey-primary: #bbb6b6;
+    --grey-200: #d9e2e1;
+  }
+
+  :export {
+    greenPrimary: var(--green-primary);
+    green150: #cee5e3;
+    grey200: #d9e2e1;
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-weight: 700;
+    src: url("assets/fonts/Inter-Bold.otf") format("otf");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-weight: 500;
+    src: url("assets/fonts/Inter-Medium.otf") format("otf");
+  }
+
+  @font-face {
+    font-family: "Inter";
+    font-weight: 300;
+    src: url("assets/fonts/Inter-Light.otf") format("otf");
+  }
+
+  html {
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  button label {
+    cursor: pointer;
+  }
+
+  .filtered-primary-color {
+    filter: invert(36%) sepia(66%) saturate(638%) hue-rotate(127deg)
+      brightness(86%) contrast(88%);
+  }
+
+  .filtered-black-color {
+    filter: brightness(0.5);
+  }
+
+  .filtered-white-color {
+    filter: brightness(0) invert(1);
+  }
+
+  .menu {
+    font-size: 15px;
+    color: var(--green-400);
+    padding: 16px;
+    margin-right: 6px;
+    overflow: auto;
+  }
+
+  .menu ul ul {
+    padding-left: 30px;
+  }
+
+  .menu ul ul ul {
+    border-left: 1px solid var(--green-250);
+  }
+
+  .menu li .menu__button {
+    width: 100%;
+    border-radius: 8px;
+    padding: 10px 20px 10px 15px;
+    margin-left: 7px;
+    text-align: start;
+    margin-bottom: 4px;
+  }
+
+  .circle {
+    border: 4px solid var(--green-250);
+    border-radius: 4px;
+    position: absolute;
+    left: -4.5px;
+  }
+
+  .shadow {
+    box-shadow: 6px -1px 6px 0px rgb(41 41 41 / 66%);
+  }
+
+  .login-card {
+    background-image: url("assets/images/login-background-s.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+  }
+
+  .leaflet-control-container {
+    position: absolute;
+    right: 56px;
+  }
+
+  .sidebar {
+    position: absolute;
+    z-index: 1000;
+    bottom: 47px;
+    top: 10px;
+    left: 28px;
+    width: 312px;
+    height: 87vh;
+  }
+
+  .legend {
+    position: absolute;
+    z-index: 1000;
+    background: white;
+    border-radius: 4px;
+    bottom: 28px;
+    right: 66px;
+    padding: 3px;
+  }
+}
