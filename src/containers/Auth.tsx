@@ -30,7 +30,7 @@ const Auth = () => {
     authUser();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  return <div>Gözləyiin...</div>;
+  return <div>Gözləyiinn...</div>;
 };
 
 export default Auth;
