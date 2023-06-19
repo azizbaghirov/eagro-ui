@@ -94,7 +94,7 @@ export const Login = () => {
         </div>
         <div className="mb-20 text-center">
           <span className="text-grey-300 text-lg lg:text-2xl">
-            Elektron Kənd Təsərrüfatı İnformasiya Sisemiii
+            Elektron Kənd Təsərrüfatı İnformasiya Sistemiii
           </span>
         </div>
         {/* <div className="mb-11 text-center">
