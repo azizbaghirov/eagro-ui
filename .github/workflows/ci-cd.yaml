@@ -1,1 +1,19 @@
+name: CI/CD Pipeline
+on:
+  push:
+    branches:
+      - main
 
+jobs:
+  build:
+    runs-on: controlplane
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Install dependencies
+        run: npm install  # Replace with the appropriate command for your frontend code
+      
+      - name: Build
+        run: npm run build:stage  # Replace with the appropriate build command
