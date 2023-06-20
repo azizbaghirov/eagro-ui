@@ -21,7 +21,7 @@ jobs:
     - run: npm ci
     - run: chmod +x change-version.sh
     - run: npm run build:stage
-    - run: sudo docker login nexus-repo.minagro.local:8090
+    - run: sudo docker login https://nexus-repo.minagro.local:443
     - run: cd /Projects/actions-runner/work/eagro-ui/eagro-ui
-    - run: sudo docker build -t nexus-repo.minagro.local:8090/eagro-analytics:1.2 .
-    - run: sudo docker push nexus-repo.minagro.local:8090/eagro-analytics:1.2
+    - run: sudo docker build -t nexus-repo.minagro.local:443/eagro-analytics:1.3 .
+    - run: sudo docker push nexus-repo.minagro.local:443/eagro-analytics:1.3
