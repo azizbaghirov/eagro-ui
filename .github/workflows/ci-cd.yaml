@@ -23,50 +23,9 @@ jobs:
     - run: chmod +x change-version.sh
     - run: npm run build:stage
     
-   # - name: Login to Nexus Package Registry
-   #   uses: docker/login-action@v1
-   #   with:
-   #       registry: ghcr.io
-   #       username: ${{ secrets.REPO_USER }}
-   #       password: ${{ secrets.REPO_TOKEN }}
-    
-   # - run: sudo docker login https://nexus-repo.minagro.local:443
-   # - run: cd /Projects/actions-runner/work/eagro-ui/eagro-ui
-   # - run: sudo docker build -t nexus-repo.minagro.local:443/eagro-analytics:1.4 .
-   # - run: sudo docker push nexus-repo.minagro.local:443/eagro-analytics:1.4
-    
-   # - name: Login to Nexus Package Registry
-   #   uses: docker/login-action@v1
-   #   with:
-   #       registry: ghcr.io
-   #       username: ${{ secrets.REPO_USER }}
-   #       password: ${{ secrets.REPO_TOKEN }}
-    
-   # - run: sudo docker login https://nexus-repo.minagro.local:443
-   # - run: cd /Projects/actions-runner/work/eagro-ui/eagro-ui
-   # - run: sudo docker build -t nexus-repo.minagro.local:443/eagro-analytics:1.4 .
-   # - run: sudo docker push nexus-repo.minagro.local:443/eagro-analytics:1.4
-    
-   # - name: Login to Nexus Package Registry
-   #   uses: docker/login-action@v1
-   #   with:
-   #       registry: ghcr.io
-   #       username: ${{ secrets.REPO_USER }}
-   #       password: ${{ secrets.REPO_TOKEN }}
-    
-   # - run: sudo docker login https://nexus-repo.minagro.local:443
-   # - run: cd /Projects/actions-runner/work/eagro-ui/eagro-ui
-   # - run: sudo docker build -t nexus-repo.minagro.local:443/eagro-analytics:1.4 .
-   # - run: sudo docker push nexus-repo.minagro.local:443/eagro-analytics:1.4
-    
-   # - name: Login to Nexus Package Registry
-   #   uses: docker/login-action@v1
-   #   with:
-   #       registry: ghcr.io
-   #       username: ${{ secrets.REPO_USER }}
-   #       password: ${{ secrets.REPO_TOKEN }}
-    
-   # - run: sudo docker login https://nexus-repo.minagro.local:443
-   # - run: cd /Projects/actions-runner/work/eagro-ui/eagro-ui
-   # - run: sudo docker build -t nexus-repo.minagro.local:443/eagro-analytics:1.4 .
-   # - run: sudo docker push nexus-repo.minagro.local:443/eagro-analytics:1.4
+    - name: Nexus Repo Publish
+      uses: sonatype-nexus-community/nexus-repo-github-action@master
+      with:
+        serverUrl: https://nexus-repo.minagro.local:443
+        username: admin
+        password: F78d59FrfY9R4xs5D75rVYfPBbHH
