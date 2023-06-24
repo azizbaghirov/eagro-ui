@@ -22,8 +22,7 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies    
-    - run: npm install -g
-    
+    - run: npm install -g   
     - run: npm ci
     - run: chmod +x change-version.sh
     - run: npm run build:stage
