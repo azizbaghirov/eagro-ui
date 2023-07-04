@@ -30,15 +30,15 @@ jobs:
       run: docker login nexus-repo.eagro.az --username admin --password F78d59FrfY9R4xs5D75rVYfPBbHH
       
     - name: Image build
-      run: docker build -t nexus-repo.eagro.az/eagro-analytics:1.7 .
+      run: docker build -t nexus-repo.eagro.az/eagro-analytics:1.8 .
       
     - name: Image Push to Nexus Repo
-      run: docker push nexus-repo.eagro.az/eagro-analytics:1.7
+      run: docker push nexus-repo.eagro.az/eagro-analytics:1.8
       
     - name: Set up Helm
       uses: azure/setup-helm@v1
       with:
         version: 'v3.3.1'
 
- #   - name: Install or Upgrade Chart
- #      run: helm upgrade --install yonca-admin-ui  ./chart --namespace eagro --set image.tag=1.7
+    - name: Install or Upgrade Chart
+      run: helm upgrade --install eagro-anal-ui ./chart --namespace eagro --set image.tag=1.8
