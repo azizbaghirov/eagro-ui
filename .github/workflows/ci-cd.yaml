@@ -3,6 +3,8 @@ name: Node.js CI
 on:
   push:
     branches: [ "master" ]
+    paths-ignore:
+      - 'ci-cd.yaml'
   workflow_dispatch:
 jobs:
   Build:
@@ -32,3 +34,11 @@ jobs:
       
     - name: Image Push to Nexus Repo
       run: docker push nexus-repo.eagro.az/eagro-analytics:1.5
+      
+    - name: Set up Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: 'v3.3.1'
+
+    - name: Install or Upgrade Chart
+      run: helm upgrade --install yonca-admin-ui  ./chart --namespace eagro --set image.tag=${{ env.SHORT_SHA }}
