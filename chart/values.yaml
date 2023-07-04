@@ -1,0 +1,4 @@
+appName: myeagroui
+namespace: eagro
+image:
+  name: nexus-repo.eagro.az/eagro-analytics
