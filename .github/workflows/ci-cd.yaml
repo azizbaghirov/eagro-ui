@@ -22,10 +22,13 @@ jobs:
     - run: npm ci
     - run: chmod +x change-version.sh
     - run: npm run build:stage
+    - run: sudo su -
     
-    - name: Nexus Repo Publish
-      uses: sonatype-nexus-community/nexus-repo-github-action@master
-      with:
-        serverUrl: https://nexus-repo.minagro.local:443
-        username: admin
-        password: F78d59FrfY9R4xs5D75rVYfPBbHH
+    - name: Nexus Repo Login
+      run: docker login nexus-repo.eagro.az --username admin --password F78d59FrfY9R4xs5D75rVYfPBbHH
+      
+    - name: Image build
+      run: docker build -t nexus-repo.eagro.az/eagro-analytics:1.5 .
+      
+    - name: Image Push to Nexus Repo
+      run: docker push nexus-repo.eagro.az/eagro-analytics:1.5
