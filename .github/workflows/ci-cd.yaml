@@ -25,7 +25,7 @@ jobs:
     - run: chmod +x change-version.sh
     - run: npm run build:stage
     - run: sudo su -
-  ffffffffffffffffffffff
+
     - name: Nexus Repo Login
       run: docker login nexus-repo.eagro.az --username admin --password F78d59FrfY9R4xs5D75rVYfPBbHH
       
