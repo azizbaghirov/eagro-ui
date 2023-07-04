@@ -94,7 +94,7 @@ export const Login = () => {
         </div>
         <div className="mb-20 text-center">
           <span className="text-grey-300 text-lg lg:text-2xl">
-            Elektron Kənd Təəəsərrüfatı İİİnformasiya Sistem
+            Elektron Kənd Təsərrüfatı İnformasiya Sistemi
           </span>
         </div>
         {/* <div className="mb-11 text-center">
@@ -117,7 +117,7 @@ export const Login = () => {
         </button>
         <div>
           <span className="text-inactive font-normal text-xs lg:text-base">
-            “DNS” © 2021 - 2022. Bütün hüquqlar qorunur.
+            “DNS” © 2021 - 2023. Ağrın aleem.
           </span>
         </div>
       </div>
