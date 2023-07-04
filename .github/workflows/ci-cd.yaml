@@ -41,4 +41,4 @@ jobs:
         version: 'v3.3.1'
 
  #   - name: Install or Upgrade Chart
- #      run: helm upgrade --install yonca-admin-ui  ./chart --namespace eagro --set image.tag=${{ env.SHORT_SHA }}
+ #      run: helm upgrade --install yonca-admin-ui  ./chart --namespace eagro --set image.tag=1.7
