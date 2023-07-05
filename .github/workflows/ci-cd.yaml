@@ -27,7 +27,7 @@ jobs:
     - run: sudo su -
 
     - name: Nexus Repo Login
-      run: docker login nexus-repo.eagro.az --username admin --password F78d59FrfY9R4xs5D75rVYfPBbHH
+      run: docker login nexus-repo.eagro.az --username ${{ secrets.NEXUS_USERNAME }} --password ${{ secrets.NEXUS_PASSWORD }}
       
     - name: Image build
       run: docker build -t nexus-repo.eagro.az/eagro-analytics:1.9 .
